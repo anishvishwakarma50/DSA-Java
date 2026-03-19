@@ -8,14 +8,14 @@ public class Main {
         while (start <= end) {
             mid = start + (end - start) / 2;
             if (target == arr[mid]) {
-                result = arr[mid];
-                start = mid+1;
+                result = mid;
+                start = mid + 1;
             }
             else if (target < arr[mid]) {
-                end = arr[mid] - 1;
+                end = mid - 1;
             }
             else {
-                start = arr[mid] + 1;
+                start = mid + 1;
             }
         }
         return result;
@@ -25,6 +25,10 @@ public class Main {
         int[] arr = {1,2,3,4,4,5,6};
         int bs = Binary_Search(arr, 4);
         
-        System.out.println(bs);
+        if (bs != -1) {
+            System.out.println("Last Occurrence at index: " + bs);
+        } else {
+            System.out.println("Not Found");
+        }
     }
 }
