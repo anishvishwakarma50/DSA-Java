@@ -49,14 +49,17 @@ public class Main {
     }
     static int countOccurrences(int[] arr, int target) {
         int fo = firstOccurrence(arr, target);
+
+        if (fo == -1) return 0;
+
         int lo = lastOccurrence(arr, target);
-        
-        return lo - fo + 1;    
+
+        return lo - fo + 1;   
     }
 
     public static void main(String[] args) {
         int[] arr = {1,2,2,2,3,4};
-        int target = 2;
+        int target = 1;
 
         int co = countOccurrences(arr, target);
 
