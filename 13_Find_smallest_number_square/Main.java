@@ -1,3 +1,4 @@
+// Find smallest Square number using Binary Search
 public class Main {
 
     static int sqrt(int n) {
